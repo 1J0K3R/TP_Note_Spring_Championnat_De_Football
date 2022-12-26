@@ -7,59 +7,47 @@ import java.util.List;
 
 @Entity
 public class Stade {
+    // Propriétées
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToMany // un stade a plusieurs équipe
-    private List<Equipe> Equipe;
-    @OneToMany // un stade a plusieurs Match
-    private List<Match> Match;
     private String Nom;
     private String Adresse;
     private Integer Capacite;
     private String Telephone;
 
-    public Stade(List<Equipe> equipe, List<Match> match, String nom, String adresse, Integer capacite, String telephone) {
-        Equipe = equipe;
-        Match = match;
+    // Constructeurs
+    public Stade(String nom, String adresse, Integer capacite, String telephone) {
         Nom = nom;
         Adresse = adresse;
         Capacite = capacite;
         Telephone = telephone;
     }
-
     public Stade() {
 
     }
 
+    // Getter et Setter
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
 
-    public List<giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Equipe> getEquipe() {
+    public List<Equipe> getEquipe() {
         return Equipe;
     }
+    public void setEquipe(List<Equipe> equipe) { Equipe = equipe; }
 
-    public void setEquipe(List<giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Equipe> equipe) {
-        Equipe = equipe;
-    }
-
-    public List<giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Match> getMatch() {
+    public List<Match> getMatch() {
         return Match;
     }
-
-    public void setMatch(List<giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Match> match) {
-        Match = match;
-    }
+    public void setMatch(List<Match> match) { Match = match; }
 
     public String getNom() {
         return Nom;
     }
-
     public void setNom(String nom) {
         Nom = nom;
     }
@@ -67,7 +55,6 @@ public class Stade {
     public String getAdresse() {
         return Adresse;
     }
-
     public void setAdresse(String adresse) {
         Adresse = adresse;
     }
@@ -75,7 +62,6 @@ public class Stade {
     public Integer getCapacite() {
         return Capacite;
     }
-
     public void setCapacite(Integer capacite) {
         Capacite = capacite;
     }
@@ -83,8 +69,13 @@ public class Stade {
     public String getTelephone() {
         return Telephone;
     }
-
     public void setTelephone(String telephone) {
         Telephone = telephone;
     }
+
+    // Relation exterieur
+    @OneToMany
+    private List<Equipe> Equipe;
+    @OneToMany
+    private List<Match> Match;
 }

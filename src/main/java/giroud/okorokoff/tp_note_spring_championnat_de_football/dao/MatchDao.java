@@ -9,6 +9,5 @@ import java.util.List;
 
 @Repository
 public interface MatchDao extends JpaRepository<Match, Long> {
-    //  Championnat findChampionnatsByPays(Pays pays);
     List<Match> findMatchesByJournee(Journee journee);
 }

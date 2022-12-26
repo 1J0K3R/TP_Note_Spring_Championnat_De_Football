@@ -9,7 +9,8 @@ import java.util.List;
 
 @Repository
 public interface JourneeDao extends JpaRepository<Journee, Long> {
-    //  Championnat findChampionnatsByPays(Pays pays);
     List<Journee> findJourneesByChampionnat(Championnat championnat);
+    Journee findJourneeByNumero(Integer numero);
+    Journee findJourneeByNumeroAndChampionnat(Integer numero,Championnat championnat);
 
 }

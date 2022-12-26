@@ -13,27 +13,25 @@ public class User {
     private String Nom;
     private String Prenom;
     private String Login;
-    private String mdp;
+    private String Mdp;
     private String Pseudo;
     private String Email;
 
-    public User() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
 
     public User(String nom, String prenom, String login, String mdp, String pseudo, String email) {
         Nom = nom;
         Prenom = prenom;
         Login = login;
-        this.mdp = mdp;
+        Mdp = mdp;
         Pseudo = pseudo;
         Email = email;
     }
+    public User() {
 
+    }
+    public Long getId() {
+        return id;
+    }
     public void setId(Long id) {
         this.id = id;
     }
@@ -41,7 +39,6 @@ public class User {
     public String getNom() {
         return Nom;
     }
-
     public void setNom(String nom) {
         Nom = nom;
     }
@@ -49,7 +46,6 @@ public class User {
     public String getPrenom() {
         return Prenom;
     }
-
     public void setPrenom(String prenom) {
         Prenom = prenom;
     }
@@ -57,23 +53,20 @@ public class User {
     public String getLogin() {
         return Login;
     }
-
     public void setLogin(String login) {
         Login = login;
     }
 
     public String getMdp() {
-        return mdp;
+        return Mdp;
     }
-
     public void setMdp(String mdp) {
-        this.mdp = mdp;
+        this.Mdp = mdp;
     }
 
     public String getPseudo() {
         return Pseudo;
     }
-
     public void setPseudo(String pseudo) {
         Pseudo = pseudo;
     }
@@ -81,7 +74,6 @@ public class User {
     public String getEmail() {
         return Email;
     }
-
     public void setEmail(String email) {
         Email = email;
     }

@@ -2,26 +2,27 @@ package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Pays {
+    // Propriétées
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    private Championnat Championnat;
     private String nom;
     private String logo;
 
-    public Pays(Championnat championnat, String nom, String logo) {
-        Championnat = championnat;
+    // Constructeur
+    public Pays( String nom, String logo) {
         this.nom = nom;
         this.logo = logo;
     }
-
     public Pays() {
 
     }
 
+    // Getter et Setter
     public Long getId() {
         return id;
     }
@@ -30,11 +31,11 @@ public class Pays {
         this.id = id;
     }
 
-    public Championnat getChampionnat() {
+    public List<Championnat> getChampionnat() {
         return Championnat;
     }
 
-    public void setChampionnat(Championnat championnat) {
+    public void setChampionnat(List<Championnat> championnat) {
         Championnat = championnat;
     }
 
@@ -53,4 +54,8 @@ public class Pays {
     public void setLogo(String logo) {
         this.logo = logo;
     }
+
+    // Relation exterieurs
+    @OneToMany
+    private List<Championnat> Championnat;
 }

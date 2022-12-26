@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface EquipeDao extends JpaRepository<Equipe, Long> {
     List<Equipe> findEquipesByChampionnat(Championnat championnat);
+    Equipe findEquipeByNom(String nom);
 }
