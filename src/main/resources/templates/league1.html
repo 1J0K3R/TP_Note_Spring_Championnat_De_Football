@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>FootBall Ruby</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="assets/img/login/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html">FootBall Ruby</a></h1>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active" href="index.html">Accueil</a></li>
+          <li><a href="championnat.html">Championnat</a></li>
+          <li class="dropdown"><a href="#"><span>Modification</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Championnat</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="creat_champ.html">Créer</a></li>
+                  <li><a href="modif_champ.html">Modifier</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Equipe</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="creat_equipe.html">Créer</a></li>
+                  <li><a href="modif_equipe.html">Modifier</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Résultats</a></li>
+            </ul>
+          </li>
+          <li><a class="getstarted" href="#">Se Déconnecter</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="breadcrumb-hero">
+        <div class="container">
+          <div class="breadcrumb-hero">
+            <h2>Championnat</h2>
+            <p>Ligue 1</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li>Ligue 1</li>
+        </ol>
+      </div>
+    </section>
+    <section id="services" class="services ">
+      <div class="container">
+
+        <div class="row">
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Classement</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Résultats</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <br>
+              <table class="table">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">EQUIPES</th>
+                    <th scope="col">DERNIERS RESULTATS</th>
+                    <th scope="col">J</th>
+                    <th scope="col">V</th>
+                    <th scope="col">N</th>
+                    <th scope="col">P</th>
+                    <th scope="col">BP</th>
+                    <th scope="col">BC</th>
+                    <th scope="col">+/-</th>
+                    <th scope="col">PTS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      <a href="psg.html">PARIS SAINT-GERMAIN</a></td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><img
+                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                      PARIS SAINT-GERMAIN</td>
+                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
+                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>46</td>
+                    <td>13</td>
+                    <td>33</td>
+                    <th scope="row">44</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <br>
+              <div class="input-group">
+                <span class="input-group-text">Journée</span>
+                <input type="date" aria-label="Last name" class="form-control" value="2023-01-29">
+              </div>
+              <br>
+              <p class="fw-bold">19 ème journée</p>
+              <div class="container text-center mb-5">
+                <div class="row align-items-start">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+                <div class="row align-items-start mt-2">
+                  <div class="col-3 ">
+                    Paris Saint-Germain <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
+                  </div>
+                  <div class="col-1 bg-dark text-white fw-bold">
+                    5 - 1
+                  </div>
+                  <div class="col-3">
+                    <img src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png"> Paris Saint-Germain
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Football Ruby</h3>
+            <p>bla bla bla</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>liens Utiles</h4>
+            <ul>
+              <li><a href="#">bla bla</a></li>
+              <li><a href="#">bla bla</a></li>
+              <li><a href="#">bla bla</a></li>
+              <li><a href="#">bla bla</a></li>
+              <li><a href="#">bla bla</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>CONTACTEZ-NOUS</h4>
+            <p>
+              bla bla <br>
+              bla bla<br>
+              bla bla <br>
+              <strong>Téléphone :</strong> bla bla<br>
+              <strong>Email :</strong> bla bla<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>bla bla</p>
+            <input type="email" name="email"><input type="submit" value="S'inscrire">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Football Ruby</span></strong>.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
