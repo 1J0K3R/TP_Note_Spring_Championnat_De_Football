@@ -42,7 +42,7 @@ public class Equipe {
     private List<Championnat> championnat;
     @ManyToOne
     private Stade stade;
-    @OneToMany(mappedBy="equipe1")
+    @ManyToMany(mappedBy="equipe1")
     private List<Matchs> match;
 
     // Getter et Setter

@@ -32,13 +32,14 @@ public class ChampionnatController {
 
     @PostConstruct
     private void init(){
+    // ADD USER
         if(userService.recupererUsers().isEmpty()){
             User user = new User("Guillet","Jean", "jean.guillet", "jeanGuiGui2", "Gui", "JeanGui@test.com");
             userService.ajouterUser(user);
             user = new User("Villard","Luc", "Luc.Villard", "Vivi123", "Lulu", "Luc.villlard@test.com");
             userService.ajouterUser(user);
         }
-
+    // ADD PAYS
         if(paysService.recupererLesPays().isEmpty()){
             Pays pays = new Pays("France", "Drapeau_France.png");
             paysService.ajouterPays(pays);
@@ -47,7 +48,7 @@ public class ChampionnatController {
             pays = new Pays("Espagne", "Drapeau_Espagne.png");
             paysService.ajouterPays(pays);
         }
-
+    // ADD STADE
         if(stadeService.recupererStades().isEmpty()){
                 // FRANCE
             Stade stade = new Stade("Groupama Stadium", "10 Av. Simone Veil, 69150 Décines-Charpieu", 59186, "+33 892 69 69 69");
@@ -74,7 +75,7 @@ public class ChampionnatController {
             stadeService.ajouterStade(stade);
 
         }
-
+    // ADD CHAMPIONNAT
         if(championnatService.recupererChampionnats().isEmpty()){
                 // FRANCE
             Championnat championnat = new Championnat("Ligue 1", "ligue1.png", Date.valueOf("2022-08-06"), Date.valueOf("2023-05-21"), 3, 0, 1, "Par points");
@@ -101,7 +102,7 @@ public class ChampionnatController {
             championnat.setPays(paysService.recupererPays("Italie"));
             championnatService.ajouterChampionnat(championnat);
         }
-
+    // ADD EQUIPE
         if(equipeService.recupererEquipes().isEmpty()){
             // France Ligue 1
             Equipe equipe = new Equipe("Olympique lyonnais", Date.valueOf("1950"), "OL.png", "Laurent Blanc", "Jean-Michel Aulas", "SASU", "10 AV SIMONE VEIL, 69150 DECINES-CHARPIEU", "+33 892 69 69 69", "https://www.ol.fr");
@@ -193,7 +194,7 @@ public class ChampionnatController {
             equipe.setChampionnat(championnats);
             equipeService.ajouterEquipe(equipe);
         }
-
+    // ADD JOURNEE
         if(journeeService.recupererJournees().isEmpty()){
             Journee journee = new Journee(1);
             journee.setChampionnat(championnatService.recupererChampionnat("Ligue 1"));
@@ -267,7 +268,7 @@ public class ChampionnatController {
             journee.setChampionnat(championnatService.recupererChampionnat("Serie B"));
             journeeService.ajouterJournee(journee);
         }
-
+    // ADD MATCH
         if(matchService.recupererMatchs().isEmpty()){
             Matchs match = new Matchs(2, 0);
             match.setEquipe1(equipeService.recupererEquipe("Olympique lyonnais"));
