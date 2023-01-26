@@ -11,26 +11,26 @@ public class Equipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date DateCreation;
+    private Date dateCreation;
     private String Logo;
-    private String NomEntraineur;
-    private String President;
-    private String Status;
-    private String Siege;
-    private String Telephone;
-    private String SiteWeb;
+    private String nomEntraineur;
+    private String president;
+    private String status;
+    private String siege;
+    private String telephone;
+    private String siteWeb;
     private String nom;
 
     public Equipe(String nom, Date dateCreation, String logo, String nomEntraineur, String president, String status, String siege, String telephone, String siteWeb) {
         this.nom = nom;
-        DateCreation = dateCreation;
+        this.dateCreation = dateCreation;
         Logo = logo;
-        NomEntraineur = nomEntraineur;
-        President = president;
-        Status = status;
-        Siege = siege;
-        Telephone = telephone;
-        SiteWeb = siteWeb;
+        this.nomEntraineur = nomEntraineur;
+        this.president = president;
+        this.status = status;
+        this.siege = siege;
+        this.telephone = telephone;
+        this.siteWeb = siteWeb;
     }
 
     public Equipe() {
@@ -42,7 +42,7 @@ public class Equipe {
     private List<Championnat> championnat;
     @ManyToOne
     private Stade stade;
-    @OneToMany(mappedBy="Equipe1")
+    @OneToMany(mappedBy="equipe1")
     private List<Matchs> match;
 
     // Getter et Setter
@@ -69,10 +69,10 @@ public class Equipe {
     }
 
     public Date getDateCreation() {
-        return DateCreation;
+        return dateCreation;
     }
     public void setDateCreation(Date dateCreation) {
-        DateCreation = dateCreation;
+        this.dateCreation = dateCreation;
     }
 
     public String getLogo() {
@@ -83,44 +83,44 @@ public class Equipe {
     }
 
     public String getNomEntraineur() {
-        return NomEntraineur;
+        return nomEntraineur;
     }
     public void setNomEntraineur(String nomEntraineur) {
-        NomEntraineur = nomEntraineur;
+        this.nomEntraineur = nomEntraineur;
     }
 
     public String getPresident() {
-        return President;
+        return president;
     }
     public void setPresident(String president) {
-        President = president;
+        this.president = president;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getSiege() {
-        return Siege;
+        return siege;
     }
     public void setSiege(String siege) {
-        Siege = siege;
+        this.siege = siege;
     }
 
     public String getTelephone() {
-        return Telephone;
+        return telephone;
     }
     public void setTelephone(String telephone) {
-        Telephone = telephone;
+        this.telephone = telephone;
     }
 
     public String getSiteWeb() {
-        return SiteWeb;
+        return siteWeb;
     }
     public void setSiteWeb(String siteWeb) {
-        SiteWeb = siteWeb;
+        this.siteWeb = siteWeb;
     }
 }

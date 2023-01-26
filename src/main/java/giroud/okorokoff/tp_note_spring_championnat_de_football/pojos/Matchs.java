@@ -8,13 +8,13 @@ public class Matchs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer PointsEquipe1;
-    private Integer PointsEquipe2;
+    private Integer pointsEquipe1;
+    private Integer pointsEquipe2;
 
     // Constructeurs
     public Matchs(Integer pointsEquipe1, Integer pointsEquipe2) {
-        PointsEquipe1 = pointsEquipe1;
-        PointsEquipe2 = pointsEquipe2;
+        this.pointsEquipe1 = pointsEquipe1;
+        this.pointsEquipe2 = pointsEquipe2;
     }
     public Matchs() {
 
@@ -37,13 +37,13 @@ public class Matchs {
 
     public void setJournee(Journee journee) { this.journee = journee; }
 
-    public Integer getPointsEquipe1() { return PointsEquipe1; }
+    public Integer getPointsEquipe1() { return pointsEquipe1; }
 
-    public void setPointsEquipe1(Integer pointsEquipe1) { PointsEquipe1 = pointsEquipe1; }
+    public void setPointsEquipe1(Integer pointsEquipe1) { this.pointsEquipe1 = pointsEquipe1; }
 
-    public Integer getPointsEquipe2() { return PointsEquipe2; }
+    public Integer getPointsEquipe2() { return pointsEquipe2; }
 
-    public void setPointsEquipe2(Integer pointsEquipe2) { PointsEquipe2 = pointsEquipe2; }
+    public void setPointsEquipe2(Integer pointsEquipe2) { this.pointsEquipe2 = pointsEquipe2; }
 
     // Relations exterieurs
     @ManyToOne

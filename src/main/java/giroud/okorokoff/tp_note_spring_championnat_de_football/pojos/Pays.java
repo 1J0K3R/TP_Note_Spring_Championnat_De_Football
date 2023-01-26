@@ -56,6 +56,6 @@ public class Pays {
     }
 
     // Relation exterieurs
-    @OneToMany(mappedBy="Pays")
+    @OneToMany(mappedBy="pays")
     private List<Championnat> championnat;
 }

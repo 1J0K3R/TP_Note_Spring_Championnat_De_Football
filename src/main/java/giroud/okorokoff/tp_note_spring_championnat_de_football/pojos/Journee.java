@@ -10,10 +10,10 @@ public class Journee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer Numero;
+    private Integer numero;
 
     public Journee(Integer numero) {
-        Numero = numero;
+        this.numero = numero;
     }
 
     public Journee() {
@@ -23,7 +23,7 @@ public class Journee {
     // Relations Exterieurs
     @ManyToOne
     private Championnat championnat;
-    @OneToMany(mappedBy="Journee")
+    @OneToMany(mappedBy="journee")
     private List<Matchs> match;
 
     // Getter et Setter
@@ -43,9 +43,9 @@ public class Journee {
     public void setMatch(List<Matchs> match) { this.match = match; }
 
     public Integer getNumero() {
-        return Numero;
+        return numero;
     }
     public void setNumero(Integer numero) {
-        Numero = numero;
+        this.numero = numero;
     }
 }

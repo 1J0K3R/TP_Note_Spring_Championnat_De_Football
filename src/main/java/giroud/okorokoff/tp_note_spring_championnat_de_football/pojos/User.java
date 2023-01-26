@@ -7,21 +7,21 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Nom;
-    private String Prenom;
-    private String Login;
-    private String Mdp;
-    private String Pseudo;
-    private String Email;
+    private String nom;
+    private String prenom;
+    private String login;
+    private String mdp;
+    private String pseudo;
+    private String email;
 
 
     public User(String nom, String prenom, String login, String mdp, String pseudo, String email) {
-        Nom = nom;
-        Prenom = prenom;
-        Login = login;
-        Mdp = mdp;
-        Pseudo = pseudo;
-        Email = email;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.mdp = mdp;
+        this.pseudo = pseudo;
+        this.email = email;
     }
     public User() {
 
@@ -34,44 +34,44 @@ public class User {
     }
 
     public String getNom() {
-        return Nom;
+        return nom;
     }
     public void setNom(String nom) {
-        Nom = nom;
+        this.nom = nom;
     }
 
     public String getPrenom() {
-        return Prenom;
+        return prenom;
     }
     public void setPrenom(String prenom) {
-        Prenom = prenom;
+        this.prenom = prenom;
     }
 
     public String getLogin() {
-        return Login;
+        return login;
     }
     public void setLogin(String login) {
-        Login = login;
+        this.login = login;
     }
 
     public String getMdp() {
-        return Mdp;
+        return mdp;
     }
     public void setMdp(String mdp) {
-        this.Mdp = mdp;
+        this.mdp = mdp;
     }
 
     public String getPseudo() {
-        return Pseudo;
+        return pseudo;
     }
     public void setPseudo(String pseudo) {
-        Pseudo = pseudo;
+        this.pseudo = pseudo;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 }

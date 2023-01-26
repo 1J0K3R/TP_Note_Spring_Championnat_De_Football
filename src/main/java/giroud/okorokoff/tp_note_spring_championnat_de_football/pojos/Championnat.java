@@ -42,7 +42,7 @@ public class Championnat {
     private Pays pays;
     @ManyToMany
     private List<Equipe> equipe;
-    @OneToMany(mappedBy="Championnat")
+    @OneToMany(mappedBy="championnat")
     private List<Journee> journee;
 
     // Getter et Setter

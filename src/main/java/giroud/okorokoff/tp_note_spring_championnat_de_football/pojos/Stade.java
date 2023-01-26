@@ -11,17 +11,17 @@ public class Stade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Nom;
-    private String Adresse;
-    private Integer Capacite;
-    private String Telephone;
+    private String nom;
+    private String adresse;
+    private Integer capacite;
+    private String telephone;
 
     // Constructeurs
     public Stade(String nom, String adresse, Integer capacite, String telephone) {
-        Nom = nom;
-        Adresse = adresse;
-        Capacite = capacite;
-        Telephone = telephone;
+        this.nom = nom;
+        this.adresse = adresse;
+        this.capacite = capacite;
+        this.telephone = telephone;
     }
     public Stade() {
 
@@ -46,36 +46,36 @@ public class Stade {
     public void setMatch(List<Matchs> match) { this.match = match; }
 
     public String getNom() {
-        return Nom;
+        return nom;
     }
     public void setNom(String nom) {
-        Nom = nom;
+        this.nom = nom;
     }
 
     public String getAdresse() {
-        return Adresse;
+        return adresse;
     }
     public void setAdresse(String adresse) {
-        Adresse = adresse;
+        this.adresse = adresse;
     }
 
     public Integer getCapacite() {
-        return Capacite;
+        return capacite;
     }
     public void setCapacite(Integer capacite) {
-        Capacite = capacite;
+        this.capacite = capacite;
     }
 
     public String getTelephone() {
-        return Telephone;
+        return telephone;
     }
     public void setTelephone(String telephone) {
-        Telephone = telephone;
+        this.telephone = telephone;
     }
 
     // Relation exterieur
-    @OneToMany(mappedBy="Stade")
+    @OneToMany(mappedBy="stade")
     private List<Equipe> equipe;
-    @OneToMany(mappedBy="Stade")
+    @OneToMany(mappedBy="stade")
     private List<Matchs> match;
 }
