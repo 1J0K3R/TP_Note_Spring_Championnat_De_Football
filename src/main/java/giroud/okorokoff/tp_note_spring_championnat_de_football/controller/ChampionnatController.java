@@ -2,7 +2,7 @@ package giroud.okorokoff.tp_note_spring_championnat_de_football.controller;
 
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.*;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.*;
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Controller;
 
 import java.sql.Date;

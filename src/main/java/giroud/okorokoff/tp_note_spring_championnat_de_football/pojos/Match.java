@@ -1,6 +1,6 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Match {

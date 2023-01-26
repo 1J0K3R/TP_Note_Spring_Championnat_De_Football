@@ -1,9 +1,6 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
