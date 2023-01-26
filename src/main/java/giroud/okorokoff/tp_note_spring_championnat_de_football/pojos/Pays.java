@@ -32,11 +32,11 @@ public class Pays {
     }
 
     public List<Championnat> getChampionnat() {
-        return Championnat;
+        return championnat;
     }
 
     public void setChampionnat(List<Championnat> championnat) {
-        Championnat = championnat;
+        this.championnat = championnat;
     }
 
     public String getNom() {
@@ -57,5 +57,5 @@ public class Pays {
 
     // Relation exterieurs
     @OneToMany(mappedBy="Pays")
-    private List<Championnat> Championnat;
+    private List<Championnat> championnat;
 }

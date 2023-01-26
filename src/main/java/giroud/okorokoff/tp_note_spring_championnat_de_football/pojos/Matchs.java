@@ -21,21 +21,21 @@ public class Matchs {
     }
 
     // Getter et Setter
-    public Stade getStade() { return Stade; }
+    public Stade getStade() { return stade; }
 
-    public void setStade(Stade stade) { Stade = stade; }
+    public void setStade(Stade stade) { this.stade = stade; }
 
-    public Equipe getEquipe1() { return Equipe1; }
+    public Equipe getEquipe1() { return equipe1; }
 
-    public void setEquipe1(Equipe equipe1) { Equipe1 = equipe1; }
+    public void setEquipe1(Equipe equipe1) { this.equipe1 = equipe1; }
 
-    public Equipe getEquipe2() { return Equipe2; }
+    public Equipe getEquipe2() { return equipe2; }
 
-    public void setEquipe2(Equipe equipe2) { Equipe2 = equipe2; }
+    public void setEquipe2(Equipe equipe2) { this.equipe2 = equipe2; }
 
-    public Journee getJournee() { return Journee; }
+    public Journee getJournee() { return journee; }
 
-    public void setJournee(Journee journee) { Journee = journee; }
+    public void setJournee(Journee journee) { this.journee = journee; }
 
     public Integer getPointsEquipe1() { return PointsEquipe1; }
 
@@ -47,11 +47,11 @@ public class Matchs {
 
     // Relations exterieurs
     @ManyToOne
-    private Stade Stade;
+    private Stade stade;
     @ManyToOne
-    private Equipe Equipe1;
+    private Equipe equipe1;
     @ManyToOne
-    private Equipe Equipe2;
+    private Equipe equipe2;
     @ManyToOne
-    private Journee Journee;
+    private Journee journee;
 }

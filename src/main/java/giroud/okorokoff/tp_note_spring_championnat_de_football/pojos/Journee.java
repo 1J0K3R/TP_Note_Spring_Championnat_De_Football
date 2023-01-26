@@ -22,9 +22,9 @@ public class Journee {
 
     // Relations Exterieurs
     @ManyToOne
-    private Championnat Championnat;
+    private Championnat championnat;
     @OneToMany(mappedBy="Journee")
-    private List<Matchs> Match;
+    private List<Matchs> match;
 
     // Getter et Setter
     public Long getId() {
@@ -34,13 +34,13 @@ public class Journee {
         this.id = id;
     }
 
-    public Championnat getChampionnat() { return Championnat; }
-    public void setChampionnat(Championnat championnat) { Championnat = championnat; }
+    public Championnat getChampionnat() { return championnat; }
+    public void setChampionnat(Championnat championnat) { this.championnat = championnat; }
 
     public List<Matchs> getMatch() {
-        return Match;
+        return match;
     }
-    public void setMatch(List<Matchs> match) { Match = match; }
+    public void setMatch(List<Matchs> match) { this.match = match; }
 
     public Integer getNumero() {
         return Numero;

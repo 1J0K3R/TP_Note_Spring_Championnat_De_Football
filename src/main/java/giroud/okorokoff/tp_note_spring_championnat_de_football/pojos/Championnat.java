@@ -39,11 +39,11 @@ public class Championnat {
 
     // Relations exterieurs
     @ManyToOne
-    private Pays Pays;
+    private Pays pays;
     @ManyToMany
-    private List<Equipe> Equipe;
+    private List<Equipe> equipe;
     @OneToMany(mappedBy="Championnat")
-    private List<Journee> Journee;
+    private List<Journee> journee;
 
     // Getter et Setter
     public Long getId() {
@@ -54,21 +54,21 @@ public class Championnat {
     }
 
     public Pays getPays() {
-        return Pays;
+        return pays;
     }
     public void setPays(Pays pays) {
-        Pays = pays;
+        this.pays = pays;
     }
 
     public List<Equipe> getEquipe() {
-        return Equipe;
+        return equipe;
     }
-    public void setEquipe(List<Equipe> equipe) { Equipe = equipe; }
+    public void setEquipe(List<Equipe> equipe) { this.equipe = equipe; }
 
     public List<Journee> getJournee() {
-        return Journee;
+        return journee;
     }
-    public void setJournee(List<Journee> journee) { Journee = journee; }
+    public void setJournee(List<Journee> journee) { this.journee = journee; }
 
     public String getNom() {
         return nom;

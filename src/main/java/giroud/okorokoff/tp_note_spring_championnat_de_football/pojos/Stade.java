@@ -36,14 +36,14 @@ public class Stade {
     }
 
     public List<Equipe> getEquipe() {
-        return Equipe;
+        return equipe;
     }
-    public void setEquipe(List<Equipe> equipe) { Equipe = equipe; }
+    public void setEquipe(List<Equipe> equipe) { this.equipe = equipe; }
 
     public List<Matchs> getMatch() {
-        return Match;
+        return match;
     }
-    public void setMatch(List<Matchs> match) { Match = match; }
+    public void setMatch(List<Matchs> match) { this.match = match; }
 
     public String getNom() {
         return Nom;
@@ -75,7 +75,7 @@ public class Stade {
 
     // Relation exterieur
     @OneToMany(mappedBy="Stade")
-    private List<Equipe> Equipe;
+    private List<Equipe> equipe;
     @OneToMany(mappedBy="Stade")
-    private List<Matchs> Match;
+    private List<Matchs> match;
 }
