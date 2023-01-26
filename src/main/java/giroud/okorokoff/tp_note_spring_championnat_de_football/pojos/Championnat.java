@@ -40,9 +40,9 @@ public class Championnat {
     // Relations exterieurs
     @ManyToOne
     private Pays Pays;
-    @OneToMany
+    @ManyToMany
     private List<Equipe> Equipe;
-    @OneToMany
+    @OneToMany(mappedBy="Championnat")
     private List<Journee> Journee;
 
     // Getter et Setter

@@ -3,7 +3,7 @@ package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 import javax.persistence.*;
 
 @Entity
-public class Match {
+public class Matchs {
     // Propriétées
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,11 +12,11 @@ public class Match {
     private Integer PointsEquipe2;
 
     // Constructeurs
-    public Match(Integer pointsEquipe1, Integer pointsEquipe2) {
+    public Matchs(Integer pointsEquipe1, Integer pointsEquipe2) {
         PointsEquipe1 = pointsEquipe1;
         PointsEquipe2 = pointsEquipe2;
     }
-    public Match() {
+    public Matchs() {
 
     }
 

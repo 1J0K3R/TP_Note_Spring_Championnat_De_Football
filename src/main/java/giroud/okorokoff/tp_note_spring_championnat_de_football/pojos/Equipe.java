@@ -38,12 +38,12 @@ public class Equipe {
     }
 
     // Relation exterieurs
-    @OneToMany
+    @ManyToMany
     private List<Championnat> Championnat;
     @ManyToOne
     private Stade Stade;
-    @OneToMany
-    private List<Match> Match;
+    @OneToMany(mappedBy="Equipe1")
+    private List<Matchs> Match;
 
     // Getter et Setter
     public List<Championnat> getChampionnat() { return Championnat; }
@@ -56,10 +56,10 @@ public class Equipe {
         Stade = stade;
     }
 
-    public List<Match> getMatch() {
+    public List<Matchs> getMatch() {
         return Match;
     }
-    public void setMatch(List<Match> match) { Match = match; }
+    public void setMatch(List<Matchs> match) { Match = match; }
 
     public String getNom() {
         return nom;

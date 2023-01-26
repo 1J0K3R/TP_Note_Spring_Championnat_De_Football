@@ -269,21 +269,21 @@ public class ChampionnatController {
         }
 
         if(matchService.recupererMatchs().isEmpty()){
-            Match match = new Match(2, 0);
+            Matchs match = new Matchs(2, 0);
             match.setEquipe1(equipeService.recupererEquipe("Olympique lyonnais"));
             match.setEquipe2(equipeService.recupererEquipe("Olympique de Marseille"));
             match.setJournee(journeeService.recupererJournee(1,championnatService.recupererChampionnat("Ligue 1")));
             match.setStade(stadeService.recupererStade("Groupama Stadium"));
             matchService.ajouterMatch(match);
 
-            match = new Match(2, 2);
+            match = new Matchs(2, 2);
             match.setEquipe1(equipeService.recupererEquipe("Real Madrid"));
             match.setEquipe2(equipeService.recupererEquipe("FC Barcelone"));
             match.setJournee(journeeService.recupererJournee(1,championnatService.recupererChampionnat("La Liga")));
             match.setStade(stadeService.recupererStade("Camp Nou"));
             matchService.ajouterMatch(match);
 
-            match = new Match(2, 4);
+            match = new Matchs(2, 4);
             match.setEquipe1(equipeService.recupererEquipe("AC Milan"));
             match.setEquipe2(equipeService.recupererEquipe("Juventus"));
             match.setJournee(journeeService.recupererJournee(1,championnatService.recupererChampionnat("Serie A")));
@@ -291,4 +291,6 @@ public class ChampionnatController {
             matchService.ajouterMatch(match);
         }
     }
+
+
 }

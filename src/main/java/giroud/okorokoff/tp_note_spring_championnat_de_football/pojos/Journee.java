@@ -23,8 +23,8 @@ public class Journee {
     // Relations Exterieurs
     @ManyToOne
     private Championnat Championnat;
-    @OneToMany
-    private List<Match> Match;
+    @OneToMany(mappedBy="Journee")
+    private List<Matchs> Match;
 
     // Getter et Setter
     public Long getId() {
@@ -37,10 +37,10 @@ public class Journee {
     public Championnat getChampionnat() { return Championnat; }
     public void setChampionnat(Championnat championnat) { Championnat = championnat; }
 
-    public List<Match> getMatch() {
+    public List<Matchs> getMatch() {
         return Match;
     }
-    public void setMatch(List<Match> match) { Match = match; }
+    public void setMatch(List<Matchs> match) { Match = match; }
 
     public Integer getNumero() {
         return Numero;

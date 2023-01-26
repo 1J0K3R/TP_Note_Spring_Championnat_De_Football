@@ -1,10 +1,8 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.services.impl;
 
 import giroud.okorokoff.tp_note_spring_championnat_de_football.dao.EquipeDao;
-import giroud.okorokoff.tp_note_spring_championnat_de_football.dao.MatchDao;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.dao.StadeDao;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Equipe;
-import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Match;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Stade;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.EquipeService;
 import org.springframework.beans.factory.annotation.Autowired;

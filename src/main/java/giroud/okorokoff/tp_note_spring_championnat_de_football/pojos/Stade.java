@@ -40,10 +40,10 @@ public class Stade {
     }
     public void setEquipe(List<Equipe> equipe) { Equipe = equipe; }
 
-    public List<Match> getMatch() {
+    public List<Matchs> getMatch() {
         return Match;
     }
-    public void setMatch(List<Match> match) { Match = match; }
+    public void setMatch(List<Matchs> match) { Match = match; }
 
     public String getNom() {
         return Nom;
@@ -74,8 +74,8 @@ public class Stade {
     }
 
     // Relation exterieur
-    @OneToMany
+    @OneToMany(mappedBy="Stade")
     private List<Equipe> Equipe;
-    @OneToMany
-    private List<Match> Match;
+    @OneToMany(mappedBy="Stade")
+    private List<Matchs> Match;
 }
