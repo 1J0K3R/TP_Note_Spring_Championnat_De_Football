@@ -3,6 +3,9 @@ package giroud.okorokoff.tp_note_spring_championnat_de_football.controller;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.*;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.*;
 import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 
 import java.sql.Date;
@@ -11,6 +14,8 @@ import java.util.List;
 
 @Controller
 public class ChampionnatController {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
     private ChampionnatService championnatService;
     private EquipeService equipeService;
     private JourneeService journeeService;
@@ -102,7 +107,40 @@ public class ChampionnatController {
             championnat.setPays(paysService.recupererPays("Italie"));
             championnatService.ajouterChampionnat(championnat);
         }
+
+        if(equipeService.recupererEquipes().isEmpty()) {
+    // ADD EQUIPE
+            jdbcTemplate.update("INSERT INTO equipe (id, logo, date_creation, nom, nom_entraineur, president, siege, site_web, status, telephone, stade_id) VALUES (1, 'ol.png', '1950-05-31 00:00:00', 'Olympique lyonnais', 'Laurent Blanc', 'Jean-Michel Aulas', '10 AV SIMONE VEIL, 69150 DECINES-CHARPIEU', 'https://www.ol.fr', 'SASU', '+33 892 69 69 69', 1)");
+            jdbcTemplate.update("INSERT INTO equipe (id, logo, date_creation, nom, nom_entraineur, president, siege, site_web, status, telephone, stade_id) VALUES (2, 'OM.png', '1899-01-02 00:00:00', 'Olympique de Marseille', 'Igor Tudor', 'Pablo Longoria', '33 TRA DE LA MARTINE 13012 MARSEILLE', 'https://www.om.fr', 'SA', '+33 484 45 38 00', 3)");
+            jdbcTemplate.update("INSERT INTO equipe (id, logo, date_creation, nom, nom_entraineur, president, siege, site_web, status, telephone, stade_id) VALUES (3, 'PSG.png', '1970-01-02 00:00:00', 'Paris Saint-Germain', 'Christophe Galtier', 'Nasser al-Khelaïfi', '24 rue du Commandant-Guilbaud 75016 PARIS', 'https://www.psg.fr/', 'SAS', '+33 892 69 69 69', 2)");
+    // ADD EQUIPE
+            jdbcTemplate.update("INSERT INTO championnat_equipe (championnat_id, equipe_id) VALUES (1,1)");
+            jdbcTemplate.update("INSERT INTO championnat_equipe (championnat_id, equipe_id) VALUES (1,2)");
+            jdbcTemplate.update("INSERT INTO championnat_equipe (championnat_id, equipe_id) VALUES (1,3)");
+        }
+
+        if(journeeService.recupererJournees().isEmpty()){
+            jdbcTemplate.update("INSERT INTO journee (id, numero, championnat_id) VALUES (1, 1, 1)");
+            jdbcTemplate.update("INSERT INTO journee (id, numero, championnat_id) VALUES (1, 2, 1)");
+        }
+
+        if(matchService.recupererMatchs().isEmpty()) {
+            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(1, 2, 1, 1, 1)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,1)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,2)");
+
+            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(1, 2, 2, 2, 3)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,3)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,2)");
+
+            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(1, 0, 3, 2, 3)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,3)");
+            jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,1)");
+        }
+
         /*
+            Le code si dessous est obselete il a été remplacer par des requête sql
+
     // ADD EQUIPE
         if(equipeService.recupererEquipes().isEmpty()){
             // France Ligue 1
