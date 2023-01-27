@@ -102,6 +102,7 @@ public class ChampionnatController {
             championnat.setPays(paysService.recupererPays("Italie"));
             championnatService.ajouterChampionnat(championnat);
         }
+        /*
     // ADD EQUIPE
         if(equipeService.recupererEquipes().isEmpty()){
             // France Ligue 1
@@ -291,6 +292,8 @@ public class ChampionnatController {
             match.setStade(stadeService.recupererStade("San Siro"));
             matchService.ajouterMatch(match);
         }
+
+         */
     }
 
 

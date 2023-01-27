@@ -40,7 +40,12 @@ public class Championnat {
     // Relations exterieurs
     @ManyToOne
     private Pays pays;
-    @ManyToMany
+    @ManyToMany//(mappedBy = "championnat")
+    @JoinTable(
+            name = "championnat_equipe",
+            joinColumns = @JoinColumn(name = "championnat_id"),
+            inverseJoinColumns = @JoinColumn(name = "equipe_id")
+    )
     private List<Equipe> equipe;
     @OneToMany(mappedBy="championnat")
     private List<Journee> journee;

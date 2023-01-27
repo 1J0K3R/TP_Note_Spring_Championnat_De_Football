@@ -1,6 +1,7 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Matchs {
@@ -25,13 +26,10 @@ public class Matchs {
 
     public void setStade(Stade stade) { this.stade = stade; }
 
-    public Equipe getEquipe1() { return equipe1; }
-
-    public void setEquipe1(Equipe equipe1) { this.equipe1 = equipe1; }
-
-    public Equipe getEquipe2() { return equipe2; }
-
-    public void setEquipe2(Equipe equipe2) { this.equipe2 = equipe2; }
+    public List<Equipe> getEquipe() {
+        return equipe;
+    }
+    public void setEquipe(List<Equipe> equipe) { this.equipe = equipe; }
 
     public Journee getJournee() { return journee; }
 
@@ -48,10 +46,13 @@ public class Matchs {
     // Relations exterieurs
     @ManyToOne
     private Stade stade;
-    @ManyToOne
-    private Equipe equipe1;
-    @ManyToOne
-    private Equipe equipe2;
+    @ManyToMany//(mappedBy="match")
+    @JoinTable(
+            name = "match_equipe",
+            joinColumns = @JoinColumn(name = "match_id"),
+            inverseJoinColumns = @JoinColumn(name = "equipe_id")
+    )
+    private List<Equipe> equipe;
     @ManyToOne
     private Journee journee;
 }

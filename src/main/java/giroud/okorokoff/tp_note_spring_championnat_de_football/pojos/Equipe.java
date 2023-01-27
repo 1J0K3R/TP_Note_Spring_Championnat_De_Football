@@ -38,11 +38,11 @@ public class Equipe {
     }
 
     // Relation exterieurs
-    @ManyToMany
+    @ManyToMany(mappedBy = "equipe")
     private List<Championnat> championnat;
     @ManyToOne
     private Stade stade;
-    @ManyToMany(mappedBy="equipe1")
+    @ManyToMany(mappedBy="equipe")
     private List<Matchs> match;
 
     // Getter et Setter
