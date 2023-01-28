@@ -33,8 +33,42 @@ public class BlogChampionnatController {
         this.userService = userService;
     }
 
-    @GetMapping({"/", "index"})
+    @GetMapping({"/", "index", "index.html"})
     public String index(){
         return "index";
+    }
+
+    @GetMapping({"championnat.html"})
+    public String championnat(){
+        return "championnat";
+    }
+
+    @GetMapping({"create_champ.html"})
+    public String create_champ(){
+        return "create_champ";
+    }
+
+    @GetMapping({"modif_champ.html"})
+    public String modif_champ(){
+        return "modif_champ";
+    }
+
+    @GetMapping({"creat_equipe.html"})
+    public String creat_equipe(){
+        return "creat_equipe";
+    }
+
+    @GetMapping({"modif_equipe.html"})
+    public String modif_equipe(){
+        return "modif_equipe";
+    }
+    @GetMapping({"resultat.html"})
+    public String resultat(){
+        return "resultat";
+    }
+
+    @GetMapping({"equipe.html"})
+    public String equipe(){
+        return "equipe";
     }
 }
