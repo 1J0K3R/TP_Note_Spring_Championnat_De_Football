@@ -1,9 +1,14 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.controller;
 
+import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Championnat;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
@@ -34,7 +39,13 @@ public class BlogChampionnatController {
     }
 
     @GetMapping({"/", "index", "index.html"})
-    public String index(){
+    public String index(Model model){
+        // récupere la liste des championnats
+        List<Championnat> championnats = championnatService.recupererChampionnats();
+
+        // envoie les données à la vue
+        model.addAttribute("championnats", championnats);
+
         return "index";
     }
 

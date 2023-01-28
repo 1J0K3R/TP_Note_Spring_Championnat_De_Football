@@ -129,11 +129,11 @@ public class ChampionnatController {
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,1)");
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,2)");
 
-            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(1, 2, 2, 2, 3)");
+            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(2, 2, 2, 2, 3)");
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,3)");
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,2)");
 
-            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(1, 0, 3, 2, 3)");
+            jdbcTemplate.update("INSERT INTO matchs (id, points_equipe1, points_equipe2, journee_id, stade_id) VALUES(3, 0, 3, 2, 3)");
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,3)");
             jdbcTemplate.update("INSERT INTO match_equipe(match_id, equipe_id) VALUES(1,1)");
         }
