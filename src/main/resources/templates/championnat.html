@@ -8,41 +8,6 @@
 <body>
 
 <header th:insert="fragment.html :: header_bar"></header>
-
-
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div class="logo">
-        <h1 class="text-light"><a href="index.html">FootBall Ruby</a></h1>
-      </div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="active" href="index.html">Accueil</a></li>
-          <li><a href="championnat.html">Championnat</a></li>
-          <li class="dropdown"><a href="#"><span>Modification</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Championnat</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="create_champ.html">Créer</a></li>
-                  <li><a href="modif_champ.html">Modifier</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Equipe</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="creat_equipe.html">Créer</a></li>
-                  <li><a href="modif_equipe.html">Modifier</a></li>
-                </ul>
-              </li>
-              <li><a href="resultat.html">Résultats</a></li>
-            </ul>
-          </li>
-          <li><a class="getstarted" href="#">Se Déconnecter</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>
-
   <main id="main">
 
     <section id="breadcrumbs" class="breadcrumbs">
@@ -65,88 +30,18 @@
       <div class="container">
 
         <div class="row" >
-
-
           <ul>
             <li data-th-each="championnat : ${ championnats }">
-              <div class="col-lg-3 col-md-6">
-                <div class="box featured" data-aos="fade-up">
-                  <h3 data-th-text="${championnat.nom}">Ligue 1 <img src="../static/img/equipes/flag_fr.jpg"></h3>
-                  <h4>23<span> Equipes</span></h4>
-                  <h5>Pays : <span> FRANCE</span></h5>
-                  <div class="btn-wrap">
-                    <a href="resultat.html" class="btn-buy">ACCEDER</a>
-                  </div>
-                </div>
-              </div>
+              <img data-th-src="@{'/img/' + ${championnat.logo}}"  />
+              <h3 data-th-text="${championnat.nom}"></h3>
             </li>
           </ul>
-
-
-
-
         </div>
-
       </div>
     </section>
   </main>
 
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Football Ruby</h3>
-            <p>bla bla bla</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>liens Utiles</h4>
-            <ul>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>CONTACTEZ-NOUS</h4>
-            <p>
-              bla bla <br>
-              bla bla<br>
-              bla bla <br>
-              <strong>Téléphone :</strong> bla bla<br>
-              <strong>Email :</strong> bla bla<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>bla bla</p>
-              <input type="email" name="email"><input type="submit" value="S'inscrire">
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Football Ruby</span></strong>.
-      </div>
-    </div>
-  </footer>
+<head th:insert="fragment.html :: footer_fragment"></head>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <script src="../static/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -8,6 +8,7 @@ public interface UserService {
 
     User ajouterUser(User user);
     User recupererUser(Long idUser);
+    User recupererUser(String pseudo);
     List<User> recupererUsers();
     Boolean userExist(String login, String mdp);
 }

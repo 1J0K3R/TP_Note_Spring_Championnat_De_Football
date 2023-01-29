@@ -1,6 +1,8 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import java.util.Date;
 import java.util.List;
@@ -11,12 +13,16 @@ public class Championnat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "Le champ nom est obligatoire")
     private String nom;
     private String logo;
     private Date dateDebut;
     private Date dateFin;
+    @NotNull(message = "Le champ pointGagner est obligatoire")
     private Integer pointGagner;
+    @NotNull(message = "Le champ pointPerdu est obligatoire")
     private Integer pointPerdu;
+    @NotNull(message = "Le champ pointNul est obligatoire")
     private Integer pointNul;
     private String typeClassement;
 
