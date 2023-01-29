@@ -1,6 +1,7 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.pojos;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class User {
@@ -9,7 +10,9 @@ public class User {
     private Long id;
     private String nom;
     private String prenom;
+    @NotBlank(message = "Le champ login est obligatoire")
     private String login;
+    @NotBlank(message = "Le champ mot de passe est obligatoire")
     private String mdp;
     private String pseudo;
     private String email;

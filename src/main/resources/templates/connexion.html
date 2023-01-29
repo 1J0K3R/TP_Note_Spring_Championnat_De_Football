@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FootBall Ruby</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../static/css/login.css" data-th-href="@{/css/login.css}" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({ google: { families: ["Inter:100,200,300,regular,500,600,700,800,900"] } });</script>
+  <link href="../static/img/login/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body class="body">
+  <div class="div_login">
+    <div class="text_login">Log in</div>
+    <form method="post" action="connexion" accept-charset="utf-8" data-th-action="@{'connexion'}" data-th-object="${connexion}" >
+    <div class="label_login">
+      <div class="text-block-2"></div>
+      <input value="Gui" id="pseudo" name="pseudo" type="text" class="login_form" placeholder="Votre pseudo *" /><br />
+    </div>
+    <div class="label_password">
+      <div class="text-block-2">Password</div>
+      <input value="jeanGuiGui2" id="mdp" name="mdp" type="password" class="login_form" placeholder="Votre mot de passe *" /><br />
+    </div>
+      <input type="submit" value="Connexion" class="div_button_login" />
+      <br>
+      <div id="erreur" data-th-if="${#fields.hasAnyErrors()}">
+        <p data-th-each="err : ${#fields.allErrors()}" data-th-text="${err}"> Erreurs </p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

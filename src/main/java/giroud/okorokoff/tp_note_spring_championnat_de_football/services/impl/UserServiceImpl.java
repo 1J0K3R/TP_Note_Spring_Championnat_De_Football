@@ -17,6 +17,11 @@ public class UserServiceImpl implements UserService {
     public User ajouterUser(User user){return userDao.save(user);}
     @Override
     public User recupererUser(Long idUser){return userDao.findById(idUser).orElse(null);}
+
+    @Override
+    public User recupererUser(String pseudo) {
+        return userDao.findByPseudo(pseudo);
+    }
     @Override
     public List<User> recupererUsers(){return userDao.findAll();}
     @Override

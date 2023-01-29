@@ -73,7 +73,7 @@
                   <option value="2">Buts concédés</option>
                   <option value="3">Différence de Buts</option>
                   <option value="4">...</option>
-                </select>
+                  </select>
               </div>
             </div>
             <div class="input-group mb-3 d-flex flex-row-reverse">
@@ -85,65 +85,7 @@
     </section>
   </main>
 
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Football Ruby</h3>
-            <p>bla bla bla</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>liens Utiles</h4>
-            <ul>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-              <li><a href="#">bla bla</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>CONTACTEZ-NOUS</h4>
-            <p>
-              bla bla <br>
-              bla bla<br>
-              bla bla <br>
-              <strong>Téléphone :</strong> bla bla<br>
-              <strong>Email :</strong> bla bla<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>bla bla</p>
-            <input type="email" name="email"><input type="submit" value="S'inscrire">
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Football Ruby</span></strong>.
-      </div>
-    </div>
-  </footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <footer th:insert="fragment.html :: footer_fragment"></footer>
   <script src="../static/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="../static/vendor/aos/aos.js"></script>
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
