@@ -16,14 +16,14 @@
         <div class="container">
           <div class="breadcrumb-hero">
             <h2>Championnat</h2>
-            <p>Ligue 1</p>
+            <p th:text="${championnat.nom}">Ligue 1</p>
           </div>
         </div>
       </div>
       <div class="container">
         <ol>
           <li><a href="index.html">Accueil</a></li>
-          <li>Ligue 1</li>
+          <li th:text="${championnat.nom}">Ligue 1</li>
         </ol>
       </div>
     </section>
@@ -59,166 +59,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      <a href="equipe.html">PARIS SAINT-GERMAIN</a></td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row"><img
-                        src="https://imgresizer.eurosport.com/unsafe/0x30/filters:format(webp)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4094.png">
-                      PARIS SAINT-GERMAIN</td>
-                    <td><i class="bi bi-check green"></i><i class="bi bi-check green"></i><i class="bi bi-dash gray"></i><i
-                        class="bi bi-check green"></i><i class="bi bi-x red"></i></td>
-                    <td>17</td>
-                    <td>14</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>46</td>
-                    <td>13</td>
-                    <td>33</td>
-                    <th scope="row">44</td>
-                  </tr>
+                <tr data-th-each="equipe, iterStat : ${ equipes }">
+                  <th scope="row" th:text="${iterStat.count}">1</th>
+                  <th scope="row"><img data-th-src="@{'/img/' + ${equipe.logo}}">
+                    <a href="equipe.html" data-th-text="${equipe.nom}" >Nom équipe</a></td>
+                  <td>17</td>
+                  <td>14</td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>46</td>
+                  <td>13</td>
+                  <td>33</td>
+                  <th scope="row">44</td>
+                </tr>
                 </tbody>
               </table>
             </div>

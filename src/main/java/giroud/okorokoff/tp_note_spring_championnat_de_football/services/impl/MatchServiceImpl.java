@@ -1,6 +1,7 @@
 package giroud.okorokoff.tp_note_spring_championnat_de_football.services.impl;
 
 import giroud.okorokoff.tp_note_spring_championnat_de_football.dao.MatchDao;
+import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Equipe;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Matchs;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,4 +20,6 @@ public class MatchServiceImpl implements MatchService {
     public Matchs recupererMatch(Long idMatch){return matchDao.findById(idMatch).orElse(null);}
     @Override
     public List<Matchs> recupererMatchs(){return matchDao.findAll();}
+    @Override
+    public List<Matchs> recupererMatchs(Equipe equipe){return matchDao.findMatchsByEquipe(equipe);}
 }

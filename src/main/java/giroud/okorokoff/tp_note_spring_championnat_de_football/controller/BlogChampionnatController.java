@@ -2,6 +2,7 @@ package giroud.okorokoff.tp_note_spring_championnat_de_football.controller;
 
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Championnat;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Connexion;
+import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.Equipe;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.pojos.User;
 import giroud.okorokoff.tp_note_spring_championnat_de_football.services.*;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -9,10 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.http.HttpSession;
@@ -134,8 +132,31 @@ public class BlogChampionnatController {
     public String modif_equipe(){
         return "modif_equipe";
     }
+    @GetMapping({"resultat.html/{id}"})
+    public String resultatWithParam(Model model, @PathVariable long id){
+        // On récupère le championnat cible
+
+        Championnat championnat = championnatService.recupererChampionnat(id);
+        // récupere la liste des équipes d'un championnats
+        List<Equipe> equipes = championnatService.recupererEquipes(championnat);
+
+        // envoie les données à la vue
+        model.addAttribute("championnat", championnat);
+        model.addAttribute("equipes", equipes);
+
+        return "resultat";
+    }
     @GetMapping({"resultat.html"})
-    public String resultat(){
+    public String resultat(Model model){
+        // On récupère le championnat ligue1
+        Championnat championnat = championnatService.recupererChampionnat(1L);
+
+        // récupere la liste des équipes d'un championnats
+        List<Equipe> equipes = championnatService.recupererEquipes(championnat);
+
+        // envoie les données à la vue
+        model.addAttribute("equipes", equipes);
+
         return "resultat";
     }
 
